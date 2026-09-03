@@ -1,0 +1,1 @@
+chrome.runtime.onMessage.addListener((msg, s, resp) => { if(msg.action === 'back') { chrome.tabs.goBack(s.tab.id); resp({success: true}); } if(msg.action === 'forward') { chrome.tabs.goForward(s.tab.id); resp({success: true}); } });
